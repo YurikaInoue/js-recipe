@@ -1,0 +1,15 @@
+img {
+    height: 300px;
+}
+
+.border {
+    border:5px solid red;
+}
+
+.border-gold {
+    border:8px solid gold;
+}
+
+.border-silver {
+    border:8px solid silver;
+}
