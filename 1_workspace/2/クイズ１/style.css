@@ -4,6 +4,10 @@
   object-fit: contain;
 }
 
+button {
+  margin: 10px;
+}
+
 .hidden {
   display: none;
 }

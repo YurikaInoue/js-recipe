@@ -9,9 +9,13 @@
   </head>
   <body>
     <header>
-      <div class="header-title">Trello?</div>
+      <div class="header-title">
+        <p>Trello?</p>
+        <span class="add-list" id="add-list">新しいリストを作成</span>
+      </div>
     </header>
-    <div class="main-container">
+    <div class="main-container" id="main-container">
+      <!--ギークサロン-->
       <div class="list-container">
         <div class="list-header">ギークサロン</div>
         <div class="cards-container" id="cards-container">
@@ -24,9 +28,10 @@
           </div>
         </div>
       </div>
+      <!--大学-->
       <div class="list-container">
         <div class="list-header">大学</div>
-        <div class="cards-container">
+        <div class="cards-container" id="cards-container_1">
           <div class="card">
             <div class="todo">これをやる</div>
             <div class="delete"></div>
@@ -36,11 +41,15 @@
             <div class="delete"></div>
           </div>
         </div>
-        <div class="list-footer">＋カードを追加</div>
+        <div class="list-footer" id="list-footer1">
+          <span id="add-card">＋カードを追加</span>
+          <!--ここに入力欄が追加される-->
+        </div>
       </div>
+      <!--家事-->
       <div class="list-container">
         <div class="list-header">家事</div>
-        <div class="cards-container">
+        <div class="cards-container" id="cards-container_2">
           <div class="card">
             <div class="todo">あれをやる</div>
             <div class="delete"></div>
@@ -50,9 +59,16 @@
             <div class="delete"></div>
           </div>
         </div>
-        <div class="list-footer">＋カードを追加</div>
+        <div class="list-footer" id="list-footer2">
+          <span class="add-card" id="add-card2">＋カードを追加</span>
+          <!--ここに入力欄が表示される-->
+        </div>
       </div>
+
+      <!--ここに新しいリストを追加する-->
+
     </div>
+
     <script src="main.js"></script>
   </body>
 </html>
