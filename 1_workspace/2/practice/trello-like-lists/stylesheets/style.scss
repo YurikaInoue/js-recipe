@@ -1,0 +1,75 @@
+@mixin border {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(186, 186, 186, 0.8);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.main-container {
+    height: 100vh;
+    background-image: url("./images/argyle.jpg");
+    background-size: cover;
+}
+
+header {
+    @include border;
+    position: fixed;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.h-title {
+    font-size: 30px;
+    color: #635522;
+}
+
+.add-list {
+    font-size: 20px;
+    color:#54491f;
+    cursor: default;
+    position: absolute;
+    right:50px;
+}
+
+.add-list:hover {
+    color: #e07e14;
+}
+
+footer {
+    @include border;
+    position: absolute;
+    bottom: 0px;
+}
+
+.lists-container {
+    display: flex;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+
+    width: 300px;
+    height: 400px;
+    background-color: #d4cdcd;
+
+    .todo {
+        height: 50px;
+        width: 200px;
+        border-radius: 30%;
+        background-color: #F2F2F2;
+        box-shadow:0 5px #635522;;
+    }
+}

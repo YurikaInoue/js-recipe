@@ -1,0 +1,85 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.main-container {
+  height: 100vh;
+  background-image: url("./images/argyle.jpg");
+  background-size: cover;
+}
+
+header {
+  height: 50px;
+  width: 100%;
+  background-color: rgba(186, 186, 186, 0.8);
+  position: fixed;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.h-title {
+  font-size: 30px;
+  color: #635522;
+}
+
+.add-list {
+  font-size: 20px;
+  color: #54491f;
+  cursor: default;
+  position: absolute;
+  right: 50px;
+}
+
+.add-list:hover {
+  color: #e07e14;
+}
+
+footer {
+  height: 50px;
+  width: 100%;
+  background-color: rgba(186, 186, 186, 0.8);
+  position: absolute;
+  bottom: 0px;
+}
+
+.lists-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 300px;
+  height: 400px;
+  background-color: #d4cdcd;
+}
+
+.card .todo {
+  height: 50px;
+  width: 200px;
+  border-radius: 30%;
+  background-color: #F2F2F2;
+  -webkit-box-shadow: 0 5px #635522;
+          box-shadow: 0 5px #635522;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello-like Review</title>
+    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+    <link rel="stylesheet" href="./stylesheets/style1.css">
+</head>
+<body>
+    <header>
+        <div class="h-title">List App</div>
+        <div class="add-list">＋リストを追加</div>
+    </header>
+    <!-- リストを入れる箱 -->
+    <div class="main-container" id="main-container">
+        <!-- リストの大枠 -->
+        <div class="list-container">
+            <div class="list-header">タイトル</div>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="text">これをやる</div>
+                    <div class="delete"></div>
+                </div>
+            </div>
+            <div class="list-footer">
+                <div>＋カードを追加</div>
+                <div class="input-container">
+                    <input type="text" class="input-todo" placeholder="やる事を入力">
+                    <div class="input-button">追加</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer></footer>
+    
+    
+    
+    
+    <script href="main.js"></script>
+</body>
+</html>

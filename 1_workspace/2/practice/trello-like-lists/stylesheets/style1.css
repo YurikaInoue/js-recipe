@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: rgba(185, 179, 192, 0.808);
+    color: rgb(87, 68, 68);
+}
+
+.h-title {
+    font-size: 30px;
+}
+
+.add-list {
+    font-size: 20px;
+    cursor: default;
+    position: absolute;
+    right: 30px;
+}
+
+.add-list:hover {
+    color: rgb(189, 70, 27);
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 52px 12px 12px;
+    background-image: url("../images/argyle.jpg");
+    background-size: cover;
+}
+
+.list-container {
+    min-width: 250px;
+    width: 250px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color:  rgba(179, 175, 184, 0.808);
+    color: rgb(87, 68, 68);
+}
+
+.list-container:nth-child(n+2) {
+    margin-left: 8px;
+}
+
+.list-header {
+    height: 60px;
+    padding: 8px 0px 0px 4px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.cards-container {
+    max-height: calc(100vh - 200px);
+    margin-top: 4px;
+    overflow-y: auto;
+}
+
+.card {
+    position: relative;
+    padding: 4px;
+    background-color:rgba(140, 134, 146, 0.856);
+    color: rgb(241, 229, 229);
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgb(235, 227, 227);
+}
+
+.card:nth-of-type(n + 2) {
+    margin-top: 8px;
+}
+
+.card:last-child { 
+    margin-bottom: 1px;
+    word-wrap: break-word;
+}
+
+.card .text {
+    overflow-x: hidden;
+}
+
+.card:hover {
+    background-color: rgba(119, 116, 121, 0.877);
+    box-shadow: none;
+    top: 1px;
+}
+
+.card:hover .delete {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    z-index: 16;
+    color: rgb(231, 222, 214);
+}
+
+.card:hover .delete:after {
+    content: "削除";
+}
+
+.card:hover .delete:hover {
+    color: rgb(243, 184, 162);
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-container .input-todo {
+    width: 75%;
+    padding: 4px;
+    background-color: rgba(140, 134, 146, 0.856);
+    color: rgb(241, 229, 229);
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgb(235, 227, 227);
+    font-size: auto;
+    border-width: 0px;
+}
+
+.input-todo::placeholder {
+    color: rgba(241, 229, 229, 0.603);
+}
+
+.input-container .input-todo:focus {
+    outline: 0;
+}
+
+.input-container .input-button {
+    padding: 4px;
+    background-color:rgba(241, 229, 229, 0.438);
+    border-radius: 4px;
+    border-bottom: 2px solid rgba(46, 32, 32, 0.418);
+    user-select: none;
+}
+
+.input-container .input-button:active {
+    transform: translateY(2px);
+}
+
+.list-footer {
+    margin-top: 8px;
+}

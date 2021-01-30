@@ -1,5 +1,5 @@
 //imgタグを入れる箱
-const images = document.getElementById("images-container")
+const images = document.getElementById("images")
 //犬種と画像枚数のセレクトボックス
 const selectBreed = document.getElementById("select-breed")
 const selectNumber = document.getElementById("select-number")
@@ -7,26 +7,39 @@ const selectNumber = document.getElementById("select-number")
 const execute = document.getElementById("execute")
 
 //犬種の配列を取得して、選択肢に追加する
-fetch("https://dog.ceo/api/breeds/list/all")
+const addBreed = function() {
+  fetch("https://dog.ceo/api/breeds/list/all")
   .then((res) => {
     return res.json() // 結果を json として読み込む
   })
-  .then((data) => {
+  .then((data) => { //dataはjson形式のデータ
     const breeds = Object.keys(data.message) // 犬種の配列を取得
     //犬種の数だけoption要素を作成・追加
-    for(breed of breeds) {
+    for(let breed of breeds) { //breedsもjson形式のデータ
       const option = document.createElement("option")
       option.textContent = breed
-      selectBreed.append(option)
+      selectBreed.append(option) //!selectBreedを.thenの外で出力すると空!(になってた)
     }
+    console.dir(selectBreed) //値が入っている事を確認
+    
+    //初期表示
+    //初期選択
+    selectBreed.children[2].setAttribute("selected", "")
+    selectNumber.children[2].setAttribute("selected", "")
+    //画像を表示
+    addSource(selectBreed.value, selectNumber.value)
   })
+}
 
 //selectNumberの選択肢を作る
-for(let i=1; i<=50; i++) {
-  const option = document.createElement("option")
-  option.textContent = i
-  selectNumber.append(option)
+const addNumber = function() {
+  for(let i=1; i<=50; i++) {
+    const option = document.createElement("option")
+    option.textContent = i
+    selectNumber.append(option)
+  }
 }
+addNumber()
 
 //指定枚数分のimg要素を作る処理
 const createImages = function(number) {
@@ -46,6 +59,7 @@ const addSource = function(breed, number) {
   })
   .then((data) => {
     createImages(number) // 枚数分img要素を作成
+    //console.dir(images) //#images
     //各img要素に対して、srcの値を順に登録していく
     for(let i=0; i<number; i++) {
       images.children[i].src = data.message[i]
@@ -53,15 +67,12 @@ const addSource = function(breed, number) {
   })
 }
 
+addBreed()
+console.dir(selectBreed)
+console.dir(selectBreed.children)
+
 //ボタンで画像を表示する
 execute.onclick = function() {
   images.textContent = ""
   addSource(selectBreed.value, selectNumber.value)
 }
-
-//初期表示//上手く行かない
-//初期選択
-selectBreed.children[0].setAttribute("selected")
-selectNumber.children[2].setAttribute("selected")
-//画像を表示
-addSource(selectBreed.value, selectNumber.value)
