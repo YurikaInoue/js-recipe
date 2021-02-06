@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Drink Vender</title>
+</head>
+<body>
+    <input type="number" id="input">
+    <button id="button">お金を投入</button>
+    <button id="back">返金レバー</button>
+    
+    <!-- 投入金額を表示 -->
+    <div>投入額:  
+        <span id="display">0</span> 円
+    </div>
+
+    <!-- おつりを表示 -->
+    <div>
+        <span>おつり: <span id="change">0</span> 円 </span>
+        <button id="get-change">おつりを空にする</button>
+    </div>
+    
+        
+    <div id="container">
+        <!-- ここに商品ボタンが追加される -->
+    </div>
+    <div id="can-box">
+        <!-- ここに商品の缶が追加される -->
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

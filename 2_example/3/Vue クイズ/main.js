@@ -1,4 +1,4 @@
-new Vue({
+const app = new Vue({
   el: "#app",
   data: {
     feedback: "",
@@ -41,3 +41,5 @@ new Vue({
     },
   },
 })
+
+//console.log(app)
